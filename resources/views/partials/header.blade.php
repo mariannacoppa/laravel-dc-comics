@@ -47,7 +47,7 @@
                         </ul>
                     </div>
                     <div class="search d-flex">
-                        <input type="text" name="search" class="search" placeholder="Search">
+                        <input type="text" name="search" class="form-control" placeholder="Search">
                         <i class="bi bi-search"></i>
                     </div>
                 </div>
