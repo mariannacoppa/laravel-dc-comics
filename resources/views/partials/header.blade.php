@@ -29,7 +29,8 @@
                         <ul class="list-unstyled d-flex m-0">
                             <li class="nav-item px-3 py-5"><a href="#" class="nav-link text-uppercase">characters</a>
                             </li>
-                            <li class="nav-item px-3 py-5 {{ Route::currentRouteName() === 'comics' ? 'active' : '' }}">
+                            <li
+                                class="nav-item px-3 py-5 {{ Route::currentRouteName() === 'comics' || Route::currentRouteName() === 'comics.show' ? 'active' : '' }}">
                                 <a href="{{ route('comics.index') }}" class="nav-link text-uppercase">comics</a>
                             </li>
                             <li class="nav-item px-3 py-5"><a href="#" class="nav-link text-uppercase">movies</a></li>

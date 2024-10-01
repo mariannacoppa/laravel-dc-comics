@@ -7,6 +7,7 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <h1>{{ $comic['title'] }}</h1>
+            <h3>{{ $comic['series'] }}</h3>
             <p><sub>{{ $comic['type'] }}</sub></p>
             <p>{{ $comic['description'] }}</p>
             <h4><strong>{{ $comic['price'] }}</strong></h4>
