@@ -21,14 +21,16 @@
             <div class="col-12">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="logo">
-                        <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="dc-logo" class="logo">
+                        <a href="{{ route('homepage') }}">
+                            <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="dc-logo" class="logo">
+                        </a>
                     </div>
                     <div class="menu">
                         <ul class="list-unstyled d-flex m-0">
                             <li class="nav-item px-3 py-5"><a href="#" class="nav-link text-uppercase">characters</a>
                             </li>
                             <li class="nav-item px-3 py-5 {{ Route::currentRouteName() === 'comics' ? 'active' : '' }}">
-                                <a href="#" class="nav-link text-uppercase">comics</a>
+                                <a href="{{ route('comics.index') }}" class="nav-link text-uppercase">comics</a>
                             </li>
                             <li class="nav-item px-3 py-5"><a href="#" class="nav-link text-uppercase">movies</a></li>
                             <li class="nav-item px-3 py-5"><a href="#" class="nav-link text-uppercase">tv</a></li>
