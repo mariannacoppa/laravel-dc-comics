@@ -17,16 +17,9 @@
     </div>
     <div id="comics-container">
         <div class="row">
-            @foreach ($comics as $comic)
-            <div class="col-12 col-md-3 col-lg-2">
-                <div class="comic-card m-1 border-0">
-                    <img class="img-fluid" src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
-                    <div class="card-body">
-                        <span class="text-uppercase">{{ $comic['series'] }}</span>
-                    </div>
-                </div>
+            <div class="col-12">
+                <h1>Laravel DC Comics</h1>
             </div>
-            @endforeach
         </div>
         <div class="col-12">
             <div class="content d-flex justify-content-center">

@@ -14,14 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $comics = config('db');
-    $shops = config('dbshops');
-    $dcs = config('dbdcs');
-    $sites = config('dbsites');
-    return view('home', compact('comics', 'shops', 'dcs', 'sites'));
+    return view('home');
 })->name('homepage');
-
-// Route::get('/', function () {
-//     $shops = config('dbshops');
-//     return view('home', compact('shops'));
-// })->name('homepage');
