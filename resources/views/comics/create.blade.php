@@ -32,17 +32,18 @@
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <label for="" class="control-label">Descrizione</label>
-                        <input type="text" name="description" id="" class="form-control" placeholder="Descrizione">
+                        <textarea name="description" id="" class="form-control" placeholder="Descrizione"></textarea>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <label for="" class="control-label">Artisti</label>
-                        <textarea type="text" name="artists" id="" class="form-control"
-                            placeholder="Artisti"></textarea>
+                        <textarea name="artists" id="" class="form-control" placeholder="Artisti"></textarea>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <label for="" class="control-label">Scrittori</label>
-                        <textarea type="writers" name="title" id="" class="form-control"
-                            placeholder="Scrittori"></textarea>
+                        <textarea name="title" id="" class="form-control" placeholder="Scrittori"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-sm btn-success">Salva</button>
                     </div>
                 </div>
             </form>

@@ -13,7 +13,7 @@
         </div>
     </div>
     <div id="comics-container">
-        <div class="row">
+        <div class="row gy-3">
             <div class="col-12">
                 <a href="{{ route('comics.create') }}" class="btn btn-sm btn-primary">Aggiungi fumetto</a>
             </div>

@@ -23,7 +23,6 @@
         </div>
         <div class="col-12">
             <div class="content d-flex justify-content-center">
-                <p>Costruisco il database</p>
                 <div class="btn btn-primary my-3 text-uppercase">load more</div>
             </div>
         </div>
