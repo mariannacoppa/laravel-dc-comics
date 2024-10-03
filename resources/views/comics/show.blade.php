@@ -6,7 +6,13 @@
             <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}" class="img-fluid">
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <h1>{{ $comic['title'] }}</h1>
+            <div class="d-flex align-items-center">
+                <h1>{{ $comic['title'] }}
+                </h1>
+                <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-sm btn-warning"><i
+                        class="fas fa-edit"></i></a>
+
+            </div>
             <h3>{{ $comic['series'] }}</h3>
             <p><sub>{{ $comic['type'] }}</sub></p>
             <p>{{ $comic['description'] }}</p>
