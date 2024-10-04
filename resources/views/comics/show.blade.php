@@ -10,8 +10,13 @@
                 <h1>{{ $comic['title'] }}
                 </h1>
                 <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-sm btn-warning"><i
-                        class="fas fa-edit"></i></a>
-
+                        class="fas fa-edit"></i>
+                </a>
+                <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-sm btn-danger ms-3">Elimina</button>
+                </form>
             </div>
             <h3>{{ $comic['series'] }}</h3>
             <p><sub>{{ $comic['type'] }}</sub></p>
