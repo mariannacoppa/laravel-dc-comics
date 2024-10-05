@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRquest;
 
 class ComicController extends Controller
 {
@@ -34,25 +36,25 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
-        $request->validate([
-            'title' => 'required|max:255',
-            'thumb' => 'max:255',
-            'price' => 'required|max:20',
-            'sale_date' => 'required|date',
-            'type' => 'required|max:255'
-        ], [
-            'title.required' => 'il titolo è obbligatorio',
-            'title.max' => 'il titolo può essere lungo al massimo :max caratteri',
-            'thumb.max' => 'il link all\'immagine può essere lungo al massimo :max caratteri', 
-            'price.required' => 'il prezzo è obbligatorio',
-            'price.max' => 'il prezzo può essere lungo al massimo :max caratteri',
-            'sale_date.required' => 'la data è obbligatoria',
-            'sale_date.date' => 'la data dev\'essere espressa in un formato valido',
-            'type.required' => 'il tipo è obbligatorio',
-            'type.max' => 'il tipo può essere lungo al massimo :max caratteri',   
-        ]);
+        // $request->validate([
+        //     'title' => 'required|max:255',
+        //     'thumb' => 'max:255',
+        //     'price' => 'required|max:20',
+        //     'sale_date' => 'required|date',
+        //     'type' => 'required|max:255'
+        // ], [
+        //     'title.required' => 'il titolo è obbligatorio',
+        //     'title.max' => 'il titolo può essere lungo al massimo :max caratteri',
+        //     'thumb.max' => 'il link all\'immagine può essere lungo al massimo :max caratteri', 
+        //     'price.required' => 'il prezzo è obbligatorio',
+        //     'price.max' => 'il prezzo può essere lungo al massimo :max caratteri',
+        //     'sale_date.required' => 'la data è obbligatoria',
+        //     'sale_date.date' => 'la data dev\'essere espressa in un formato valido',
+        //     'type.required' => 'il tipo è obbligatorio',
+        //     'type.max' => 'il tipo può essere lungo al massimo :max caratteri',   
+        // ]);
         // recupero il contenuto della richiesta
         $form_data = $request->all();
         // creo una nuova istanza per ogni fumetto
@@ -104,17 +106,17 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(UpdateComicRquest $request, Comic $comic)
     {
-        $request->validate([
-            'title' => 'required|max:255',
-            'thumb' => 'max:255',
-            'price' => 'required|max:20',
-            'sale_date' => 'required|date',
-            'type' => 'required|max:255'
-        ]);
+        // $request->validate([
+        //     'title' => 'required|max:255',
+        //     'thumb' => 'max:255',
+        //     'price' => 'required|max:20',
+        //     'sale_date' => 'required|date',
+        //     'type' => 'required|max:255'
+        // ]);
         
-        $form_data = $request->all();
+        $form_data = $request->validated();
         $comic->update($form_data);
         return redirect()->route('comics.show', compact('comic'));
     }
